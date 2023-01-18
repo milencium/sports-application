@@ -23,7 +23,7 @@ services:
       - ADMIN_USERNAME=${ADMIN_USERNAME:-admin5}
       - DATABASE_URL=${DATABASE_URL:-postgresql://postgres:postgres@host.docker.internal:5411/sportsdb?connect_timeout=300}
       - JWT_SECRET_KEY=${JWT_SECRET_KEY:-12345}
-      - SENDGRID_API_KEY=${SENDGRID_API_KEY:-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}
+      - SENDGRID_API_KEY=${SENDGRID_API_KEY:-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}
     healthcheck:
       test: 'curl http://localhost8080/health'
       interval: 1m50s
@@ -53,7 +53,7 @@ services:
       - ADMIN_USERNAME=${ADMIN_USERNAME:-admin5}
       - DATABASE_URL=${DATABASE_URL:-postgresql://postgres:postgres@host.docker.internal:5411/sportsdb?connect_timeout=300}
       - JWT_SECRET_KEY=${JWT_SECRET_KEY:-12345}
-      - SENDGRID_API_KEY=${SENDGRID_API_KEY:-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}
+      - SENDGRID_API_KEY=${SENDGRID_API_KEY:-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}
     links:
       - db
     depends_on:

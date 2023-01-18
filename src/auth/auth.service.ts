@@ -82,7 +82,7 @@ export class AuthService {
 
       const emailVerification = {
         to: email,
-        from: 'mile.druzijanic.fsblab@gmail.com',
+        from: 'mile.druzijanic@tildeloop.com',
         subject: 'Please verify your email registration',
         html: `<h2>This is your email verification link, please proceed to activate your profile </h2> <p>http://localhost:8080/auth/email-activate?token=${token}</p>`,
       };
