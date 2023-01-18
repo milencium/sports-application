@@ -1,0 +1,706 @@
+{
+	"info": {
+		"_postman_id": "8db2fed9-7aaa-4908-a042-2ea6c036bdd0",
+		"name": "Sports-Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/health",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/auth/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"test@gmail.com\",\n    \"username\":\"admin5\",\n    \"category\":\"children\",\n    \"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"test@gmail.com\",\n    \"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/users/user/:userId",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{authToken}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"admin5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/user/:userId",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"user",
+						":userId"
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "a7615ded-6554-4cc1-86cb-d75d053e0398"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/users/user/:userId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{authToken}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/users/user/:userId",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"user",
+						":userId"
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "a7615ded-6554-4cc1-86cb-d75d053e0398"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/users/users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{authToken}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/users/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/users/user/:userId",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{authToken}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/users/user/:userId",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"user",
+						":userId"
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "e8b5eff3-09b7-44e6-b332-dea53e887d9b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/sports/sport",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{authToken}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"sport\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/sports/sport",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sports",
+						"sport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/sports/sport/:sportId",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{authToken}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"sport2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/sports/sport/:sportId",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sports",
+						"sport",
+						":sportId"
+					],
+					"variable": [
+						{
+							"key": "sportId",
+							"value": "6d205f6c-fb82-4b1f-affc-a2275bc54552"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/sports/sports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/sports/sports",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sports",
+						"sports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/sports/sport/:sportId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/sports/sport/:sportId",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sports",
+						"sport",
+						":sportId"
+					],
+					"variable": [
+						{
+							"key": "sportId",
+							"value": "6d205f6c-fb82-4b1f-affc-a2275bc54552"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/sports/sport/:sportId",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{authToken}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/sports/sport/:sportId",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sports",
+						"sport",
+						":sportId"
+					],
+					"variable": [
+						{
+							"key": "sportId",
+							"value": "6d205f6c-fb82-4b1f-affc-a2275bc54552"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/classes/class",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{authToken}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"class\",\n    \"category\":\"children\",\n    \"description\":\"something\",\n    \"termin\":\"16-21\",\n    \"sportsName\":\"Fitness\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/classes/class",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"classes",
+						"class"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/classes/class/:classId",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{authToken}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"classtwo\",\n    \"category\":\"children\",\n    \"description\":\"something\",\n    \"termin\":\"16-21\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/classes/class/:classId",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"classes",
+						"class",
+						":classId"
+					],
+					"variable": [
+						{
+							"key": "classId",
+							"value": "716d7547-c3ed-4dba-9627-cd9ba6534243"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/classes/classes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/classes/classes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"classes",
+						"classes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/classes/class/:classId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/classes/class/:classId",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"classes",
+						"class",
+						":classId"
+					],
+					"variable": [
+						{
+							"key": "classId",
+							"value": "716d7547-c3ed-4dba-9627-cd9ba6534243"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/classes/class/:classId",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{authToken}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/classes/class/:classId",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"classes",
+						"class",
+						":classId"
+					],
+					"variable": [
+						{
+							"key": "classId",
+							"value": "716d7547-c3ed-4dba-9627-cd9ba6534243"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/users-enroll/enroll/:userId/:classId",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"termin\":21\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users-enroll/enroll/:userId/:classId",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users-enroll",
+						"enroll",
+						":userId",
+						":classId"
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "a7615ded-6554-4cc1-86cb-d75d053e0398"
+						},
+						{
+							"key": "classId",
+							"value": "0987bbcf-e334-4612-94db-3933aea87551"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/users-enroll/comment/:enrolledId",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"comment\":\"somecomment\",\n    \"rating\":5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users-enroll/comment/:enrolledId",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users-enroll",
+						"comment",
+						":enrolledId"
+					],
+					"variable": [
+						{
+							"key": "enrolledId",
+							"value": "38bc81f2-5bcf-4f5b-a14b-d10d26e26a1e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/users-enroll/unroll/:enrolledId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/users-enroll/unroll/:enrolledId",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users-enroll",
+						"unroll",
+						":enrolledId"
+					],
+					"variable": [
+						{
+							"key": "enrolledId",
+							"value": "38bc81f2-5bcf-4f5b-a14b-d10d26e26a1e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/users-enroll/comments/:classId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{authToken}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/users-enroll/comments/:classId",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users-enroll",
+						"comments",
+						":classId"
+					],
+					"variable": [
+						{
+							"key": "classId",
+							"value": "0987bbcf-e334-4612-94db-3933aea87551"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/sports/sports-classes?sport=Fitness&category=children",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/sports/sports-classes?sport=Fitness&category=children",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sports",
+						"sports-classes"
+					],
+					"query": [
+						{
+							"key": "sport",
+							"value": "Fitness"
+						},
+						{
+							"key": "category",
+							"value": "children"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "authToken",
+			"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXIiOiJhNzYxNWRlZC02NTU0LTRjYzEtODZjYi1kNzVkMDUzZTAzOTgiLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjc0MDQ2ODY0LCJleHAiOjE2NzQxMzMyNjR9.ueXbhg2_xrdrQVenTQfnEt7K0ORHpOoRRGInG4w8Uxk",
+			"type": "default"
+		}
+	]
+}

@@ -1,0 +1,69 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String          @id @unique @default(uuid())
+  email         String          @unique
+  username      String          @unique
+  category      String
+  password      String
+  role          String
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  enrolled      Enrolled[]
+  commentRating CommentRating[]
+}
+
+model Sports {
+  id        String   @id @unique @default(uuid())
+  name      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  Class     Class[]
+}
+
+model Class {
+  id            String          @id @unique @default(uuid())
+  name          String          @unique
+  category      String
+  description   String
+  termin        String
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  Sports        Sports?         @relation(fields: [sportsName], references: [name], onDelete: Cascade)
+  sportsName    String?
+  enrolled      Enrolled[]
+  commentRating CommentRating[]
+}
+
+model Enrolled {
+  id        String   @id @unique @default(uuid())
+  enrolled  Boolean
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  User      User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String?
+  Class     Class?   @relation(fields: [classId], references: [id], onDelete: Cascade)
+  classId   String?
+}
+
+model CommentRating {
+  id        String   @id @unique @default(uuid())
+  comment   String
+  rating    Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  User      User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String?
+  Class     Class?   @relation(fields: [classId], references: [id], onDelete: Cascade)
+  classId   String?
+}
